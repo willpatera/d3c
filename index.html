@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D3C</title>
+  <meta name="description" content="D3C">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0%25' stop-color='%23DD33CC'/><stop offset='100%25' stop-color='%23e8e8e8'/></radialGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23g)'/></svg>">
+  <style>
+    :root {
+      --bg: #e8e8e8;
+      --fg: #e8e8e8;
+      --muted: #969696;
+      --accent: #DD33CC;
+      --accent-rgb: 221, 51, 204;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: Inter, Helvetica, "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .mark-wrap {
+      padding: 4rem 5rem;
+      cursor: default;
+      border-radius: 1rem;
+      transition: background 0.6s ease;
+    }
+
+    .mark-wrap:hover,
+    .mark-wrap:focus-within {
+      background: radial-gradient(
+        ellipse at center,
+        rgba(var(--accent-rgb), 0.05) 0%,
+        transparent 70%
+      );
+    }
+
+    h1 {
+      font-size: clamp(4rem, 28vw, 13rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      text-shadow:
+        0 0 2px rgba(var(--accent-rgb), 0.08),
+        0 0 8px rgba(var(--accent-rgb), 0.05);
+      transition: text-shadow 0.5s ease;
+    }
+
+    .mark-wrap:hover h1,
+    .mark-wrap:focus-within h1 {
+      text-shadow:
+        0 0 6px rgba(var(--accent-rgb), 0.5),
+        0 0 20px rgba(var(--accent-rgb), 0.35),
+        0 0 50px rgba(var(--accent-rgb), 0.2),
+        0 0 90px rgba(var(--accent-rgb), 0.1);
+    }
+
+    .tagline {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      letter-spacing: 0.08em;
+    }
+
+    footer {
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      h1,
+      .mark-wrap {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark-wrap" tabindex="0">
+      <h1>D3C</h1>
+    </div>
+  </main>
+  <p class="tagline">Technology. Strategy. Systems.</p>
+  <footer>&copy; 2026 D3C</footer>
+</body>
+</html>
