@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>D3C — Technology, Strategy &amp; Systems</title>
-  <meta name="description" content="D3C works at the intersection of technology, computation, and strategic decision-making.">
-  <meta property="og:title" content="D3C — Technology, Strategy &amp; Systems">
-  <meta property="og:description" content="D3C works at the intersection of technology, computation, and strategic decision-making.">
+  <title>D3C Limited — Technology &amp; Strategy Consultancy</title>
+  <meta name="description" content="D3C is a technology and strategy consultancy">
+  <meta property="og:title" content="D3C Limited — Technology &amp; Strategy Consultancy">
+  <meta property="og:description" content="D3C is a technology and strategy consultancy">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://d3c.xyz">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="D3C — Technology, Strategy &amp; Systems">
-  <meta name="twitter:description" content="D3C works at the intersection of technology, computation, and strategic decision-making.">
+  <meta name="twitter:title" content="D3C Limited — Technology &amp; Strategy Consultancy">
+  <meta name="twitter:description" content="D3C is a technology and strategy consultancy">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0%25' stop-color='%23DD33CC'/><stop offset='100%25' stop-color='%23e8e8e8'/></radialGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23g)'/></svg>">
   <style>
     :root {
       --bg: #e8e8e8;
-      --fg: #e8e8e8;
-      --muted: #969696;
+      --fg: #1a1a1a;
+      --muted: #5a5a5a;
       --accent: #DD33CC;
       --accent-rgb: 221, 51, 204;
     }
@@ -35,7 +35,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       background-color: var(--bg);
       color: var(--fg);
       font-family: Inter, Helvetica, "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -44,10 +43,20 @@
     }
 
     main {
+      width: 100%;
+      flex: 1;
       display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex: 1;
+      padding: 2rem 1.5rem;
+      text-align: center;
     }
 
     .mark-wrap {
@@ -87,17 +96,36 @@
     }
 
     .tagline {
-      font-size: 0.8rem;
+      max-width: 34rem;
+      font-size: 1.125rem;
+      line-height: 1.6;
       color: var(--muted);
-      text-align: center;
-      letter-spacing: 0.08em;
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration-color: var(--accent);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--accent);
+    }
+
+    footer a {
+      color: var(--muted);
     }
 
     footer {
-      padding: 1.5rem;
+      width: min(40rem, calc(100% - 3rem));
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       font-size: 0.8rem;
       color: var(--muted);
       text-align: center;
+      line-height: 1.6;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -110,11 +138,20 @@
 </head>
 <body>
   <main>
-    <div class="mark-wrap" tabindex="0">
-      <h1>D3C</h1>
-    </div>
+    <header class="hero">
+      <div class="mark-wrap" tabindex="0">
+        <h1>D3C</h1>
+      </div>
+      <p class="tagline">D3C is a technology and strategy consultancy</p>
+    </header>
   </main>
-  <p class="tagline">Technology. Strategy. Systems.</p>
-  <footer>&copy; 2026 D3C</footer>
+  <footer>
+    <p>&copy; 2026 D3C Limited</p>
+    <p>Registered in Hong Kong SAR</p>
+    <p>Business Registration No. 81356905</p>
+    <p>Founder: William Patera</p>
+    <p>Contact: wrp@d3c.xyz</p>
+    <p><a href="privacy.html">Privacy</a></p>
+  </footer>
 </body>
 </html>
